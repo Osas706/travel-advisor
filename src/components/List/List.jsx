@@ -4,16 +4,10 @@ import PlaceDetail from '../PlaceDetails/PlaceDetail'
 import useStyles from './styles';
 
 
-const List = () => {
+const List = ({ places }) => {
   const classes = useStyles();
   const [ type, setType ] = useState('restaurants');
   const [ rating, setRating ] = useState('');
-
-  const places = [
-    {name: 'cool zone'},
-    {name: 'ht zone'},
-    {name: 'ice zone'}
-  ]
 
   return (
     <div className={classes.container}>
@@ -44,7 +38,7 @@ const List = () => {
 
 
       <Grid container spacing={3} className={classes.list}>
-        {places.map((place, i) => (
+        {places?.map((place, i) => (
           <Grid item key={i} xs={12}>
             <PlaceDetail place={place}/>
           </Grid>
