@@ -18,7 +18,7 @@ const Header = ({ onPlaceChanged, onLoad }) => {
       <AppBar position="static">
         <Toolbar className={classes.toolbar}>
           <Typography variant="h5" className={classes.title}>
-            PathF<span style={{color: 'red', fontSize: '22px', margin: '0 2px'}}>!</span>nder
+            P<span style={{color: 'red'}}>a</span>thF<span style={{color: 'red', fontSize: '22px', margin: '0 2px'}}>!</span>nder
           </Typography>
 
           <Box>
