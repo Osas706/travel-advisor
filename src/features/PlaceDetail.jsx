@@ -1,5 +1,4 @@
-import React from 'react';
-import { MapPin, Phone } from 'lucide-react';
+import { ArrowUpRight, MapPin, Phone } from 'lucide-react';
 import StarRating from './StarRating';
 
 const PlaceDetail = ({ place, selected, refProp }) => {
@@ -62,17 +61,17 @@ const PlaceDetail = ({ place, selected, refProp }) => {
 
         <div className="flex gap-2 mt-4">
           <button
-            className="flex-1 px-4 py-2 text-xs font-semibold text-white bg-primary-900 hover:bg-primary-800 rounded transition-colors"
+            className="flex items-center gap-2 px-4 py-2 text-xs font-semibold text-white bg-primary-900 hover:bg-primary-800 rounded transition-colors"
             onClick={() => window.open(place.web_url, '_blank')}
           >
-            View on Tripadvisor
+            View on Tripadvisor <ArrowUpRight size={16} />
           </button>
 
           <button
-            className="flex-1 px-4 py-2 text-xs font-semibold text-white bg-primary-900 hover:bg-primary-800 rounded transition-colors"
+            className="flex items-center gap-2 px-4 py-2 text-xs font-semibold text-white bg-primary-900 hover:bg-primary-800 rounded transition-colors"
             onClick={() => window.open(place.website, '_blank')}
           >
-            Visit Website
+            Visit Website  <ArrowUpRight size={16} />
           </button>
         </div>
       </div>

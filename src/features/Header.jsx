@@ -8,6 +8,15 @@ const Header = ({ setCoordinates }) => {
   const onLoad = (autoC) => setAutoComplete(autoC);
 
   const onPlaceChanged = () => {
+    if (!autoComplete) return;
+
+        const place = autoComplete.getPlace();
+
+    if (!place || !place.geometry || !place.geometry.location) {
+      console.warn("No valid place selected yet");
+      return;
+    }
+
     const lat = autoComplete.getPlace().geometry.location.lat();
     const lng = autoComplete.getPlace().geometry.location.lng();
 

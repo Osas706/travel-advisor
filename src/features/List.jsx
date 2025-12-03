@@ -1,6 +1,6 @@
 
-import React, { useState, useEffect, createRef } from "react";
-import { Loader, Loader2, Map } from 'lucide-react';
+import { useState, useEffect, createRef } from "react";
+import { Frown, Loader } from 'lucide-react';
 import PlaceDetail from "./PlaceDetail";
 
 const List = ({ places, childClicked, isLoading, type, setType, setRating, rating }) => {
@@ -55,6 +55,13 @@ const List = ({ places, childClicked, isLoading, type, setType, setRating, ratin
               </select>
             </div>
           </div>
+
+       {places?.length === 0 &&
+      <div className="flex flex-col gap-3 justify-center items-center h-64 text-gray-500">
+        <p>Sorry, No places found nearby.</p>
+
+        <Frown />
+      </div>}
 
           {/* PlaceDetail */}
           <div className="space-y-4">
